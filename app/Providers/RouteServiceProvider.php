@@ -46,8 +46,13 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        $this->mapVehiculoRoutes();
+
+       // Route::middleware('web')
+        //->namespace($this->namespace)
+        //->group(base_path('routes/vehiculos.php'));
     }
+
 
     /**
      * Define the "web" routes for the application.
@@ -77,4 +82,15 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+
+  
+
+    public function mapVehiculoRoutes()
+    {
+        Route::prefix('vehiculos')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/vehiculos.php'));
+    }
+
 }

@@ -7,11 +7,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <br>
-                <b><div class="form-group row" style="justify-content:center">{{ __('Restablecer Contraseña') }}</div>
-
-                <div class="card-body">
+            <div class="card fondoFormulario" >
+                <div class="modal-header encabezadoFormulario mb-3" >
+                    <h4 class="modal-title text-white" id="exampleModalLabel" style="text-align: center;" >{{ __('Restablecer Contraseña') }}</h5>
+                </div>
+                <div class="card-body contenidoFormulario" >
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -20,12 +20,10 @@
 
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-
-                        <div class="form-group row">
-                           <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electronico') }}</label>-->
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" placeholder="Correo" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="form-group col-md-12 row" style="position:relative;">
+                                <label>Correo</label>
+                                <i class="fas fa-envelope iconos" ></i>
+                                <input id="email" type="email"  class="inputTeceros form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -33,15 +31,12 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <b><button type="submit" class="btn" style="background-color: #F55804; Font-Family: verdana;  color:white"><b>
-                                    {{ __('Enviar enlace') }}
-                                </button>
+                            <div class="form-group col-md-11 ">
+                                    <button type="submit" class=" btn botonAgregar botones btn-width-ag">
+                                        {{ __('Enviar enlace') }}
+                                    </button>
+                            
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>

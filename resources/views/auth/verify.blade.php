@@ -1,12 +1,13 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
-
+                <div class="modal-header encabezadoFormulario" >
+                    <h4 class="text-center text-white" id="exampleModalLabel">{{ __('Verify Your Email Address') }}</h5>
+                </div>
+                
                 <div class="card-body">
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
@@ -18,7 +19,7 @@
                     {{ __('If you did not receive the email') }},
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                        <button type="submit" class="btn botonAgregar botones">{{ __('click here to request another') }}</button>.
                     </form>
                 </div>
             </div>

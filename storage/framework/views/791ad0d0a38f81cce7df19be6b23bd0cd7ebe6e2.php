@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
 
 
     <!-- Fonts -->
@@ -20,11 +20,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+    <link href="<?php echo e(asset('css/estilos.css')); ?>" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="{{ asset('js/main.js') }}"></script>
+	<script src="<?php echo e(asset('js/main.js')); ?>"></script>
 
 </head>
 <body> 
@@ -67,9 +67,10 @@
     <button type="button" class="btn botonAgregar botones text-white btn-cerrarSesion">Cerrar sesión</button>
   </nav>
         <main class="py-4 " >
-            @yield('content')
+            <?php echo $__env->yieldContent('content'); ?>
           
         </main>
     </div>
 </body>
 </html>
+<?php /**PATH C:\Users\ACER\Documents\proyecto_takeva\Takeva\resources\views/layouts/app.blade.php ENDPATH**/ ?>
