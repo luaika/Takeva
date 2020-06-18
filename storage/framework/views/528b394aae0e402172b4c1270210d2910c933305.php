@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div  style="width:90%;margin-left:5%;">
 <div>
@@ -143,7 +142,7 @@
                         <li class="tab"><a href="#tab6"><span class="fas fa-route "></span><span class="tab-text">Rutas</span></a></li>
                    </ul>
 
-                    <div class="secciones">
+                    <div class="form-goup secciones">
                         <div id="tab1">
                                 <table class="table md-7" >
                                 <thead class=" encabezadoFormulario text-white " >
@@ -328,4 +327,6 @@
 </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Estefania\Documents\PROYECTO TAKEVA\Takeva\resources\views/vehiculos/registro.blade.php ENDPATH**/ ?>

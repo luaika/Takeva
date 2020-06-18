@@ -47,5 +47,19 @@ Route::get('/rutavehiculo', function(){
 
 Auth::routes();
 
+Route::get('/cantidadPasajeros', function(){
+    return view('pasajeros/cantidadPasajeros');
+  });
+Auth::routes();
+
+Route::get('/comparativosHistoricos', function(){
+    return view('pasajeros/comparativosHistoricos');
+  });
+Auth::routes();
+
+Route::get('/reporteCalificacionServicio', function(){
+    return view('pasajeros/reporteCalificacionServicio');
+  });
+Auth::routes();
 
 //Router::get('/registrar', 'VehiculosController@index')->name('vehiculos/registro');
