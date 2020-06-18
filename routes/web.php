@@ -20,6 +20,12 @@ Auth::routes();
 Route::get('/login', function(){
     return view('auth/login');
   });
-  
-//Route::get('home', 'HomeController@index')->name('home');
+
 Auth::routes();
+
+  Route::get('/inicio', function(){
+    return view('inicio');
+  });
+  Auth::routes();
+
+//Route::get('home', 'HomeController@index')->name('home');

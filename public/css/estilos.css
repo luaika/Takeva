@@ -1,9 +1,10 @@
 body{
     font-size:1.2rem;
       background: #D4D4D4;
-      font-family: 'Open sans';
+      font-family: 'Raleway';
 }
 
+/*Menú*/
 .menu{
     background-color: #00031c!important;
 }
@@ -14,7 +15,9 @@ body{
     background-color: #ffb900;
     color: black !important;
 }
-
+.navbar-toggler-icon{
+    background-color: #2a2e43 !important;
+}
 /* login */
 .fondo{
     background-image: url('/images/Logo.png');
@@ -26,7 +29,6 @@ body{
     justify-content:center;
 }
 
-
 .cabeceraFormulario{
     background: red;
 }
@@ -35,22 +37,20 @@ body{
     background: red;
     height: 2rem;
     width: 3rem;
-   
+
 }
 .contenidoFormulario{
     margin-left:10%;
-    height:auto; 
+    height:auto;
     width:80%;
-    
+
 }
 
 .fondoFormulario{
     background-color: #F1F1EF;
     margin-bottom:10%;
-    height:100%; 
+    height:100%;
 }
-
-
 
 .encabezadoFormulario{
     background-color: #2a2e43 !important;
@@ -66,38 +66,34 @@ body{
 }
 
 .botonCancelar{
-    margin-left: 0.5%;
     border-color: #2a2e43;
     color: black !important;
 }
 
-
 .botonCancelar:hover {
-  background-color: #2a2e43 !important; 
+  background-color: #2a2e43 !important;
     color: white !important;
 }
 .botonAgregar {
-    background-color: #ffb900 !important; 
+    background-color: #ffb900 !important;
     color:black !important;
     width:40%;
 }
-
 .botonAgregar:hover {
     background-color: #F0AE05 !important;
     border-color: #E5A809 !important;
 }
 
 .btn-cerrarSesion{
-  background-color: #ffb900 !important; 
+    background-color: #ffb900 !important;
     color:black !important;
-    width:11%;
+
 }
 
 .btn-cerrarSesion:hover {
   background-color: #F0AE05 !important;
   border-color: #E5A809 !important;
 }
-
 .listado{
     margin-top: 5%;
 }
@@ -109,8 +105,6 @@ body{
 .btn-width-ag{
     width:100% !important;
 }
-
-
 
 /*stefania */
 .container{
@@ -127,28 +121,22 @@ body{
     white-space: normal;
     Font-Family: verdana;
 }
-
-
-
 .divFoto{
   margin-right: auto;
 
 }
-
-
 .iconos{
     color:#aaa;
-    padding: 38px 23px;
+    padding: 42px 23px;
     position:absolute;
     left:0%;
     top:8%;
+    font-size:15px ;
 }
 
 .inputTeceros{
     padding: 15px 30px;
 }
-
-
 #inputFoto{
     height: 160%;
     width: 80%;
@@ -214,7 +202,6 @@ body{
 }
 
 
-
 /* seccion  container vehiculos*/
 
 *{
@@ -262,7 +249,7 @@ ul.tabs li a .tab-text{
 
 .secciones{
 	width: 100%;
-    background: #fff;
+    background:#fff;
     margin-bottom: 2%;
     margin-top:-1%;
 }
@@ -2635,4 +2622,119 @@ ul.tabs li a .tab-text{
     overflow: visible;
     clip: auto;
   }
-  
+
+
+/*Pasajeros - Estefania*/
+.logoExcel{
+    width: 50%;
+    height: 6%;
+}
+
+.tituloTabla{
+    text-align: left;
+    color:  black;
+}
+
+.tablaPasajeros{
+    background-color: #2a2e43 !important;
+    color: white;
+}
+
+.table{
+    width: 100%;
+    align-content: center;
+}
+
+/*Comparativos e historicos - Estefania*/
+
+.comparativos{
+    align-content: center;
+}
+.imgComparativos{
+    width: 100%;
+    align-content: center;
+}
+.cardComparativos{
+    border-color: #F0AE05 !important;
+}
+.imgHistoricos{
+    width: 95%;
+    align-content: center;
+}
+.card-header{
+    background-color: #2a2e43;
+    color: white;
+    border-color: #F0AE05 !important;
+}
+
+/*Reporte - Estefania*/
+.imgReporte{
+    width: 100%;
+}
+
+.cardReporte{
+    align-content: center;
+    border: #2a2e43 1px solid !important;
+    width: 80%;
+    margin: auto;
+}
+.tituloReporte{
+    background-color: #2a2e43;
+    color: white;
+
+}
+.divReporte{
+    align-content: center;
+}
+.divImgReporte{
+    display: block;
+    margin: auto;
+}
+.titulo{
+    text-align: right;
+}
+.iconoEstrella{
+  color:#181d36;
+  font-size: 20px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 767px) {
+    .botonAgregar{
+        width: 70%;
+        margin-right: 100%;
+        margin: 1%;
+    }
+    .botonCancelar{
+     margin-right: 100%;
+     margin: 2%;
+    }
+}
+
+/*Tabla RegistroVehiculos*/
+.tab:hover{
+    background-color: #F0AE05 !important;
+}
+
+/* Inicio */
+
+.imgLogo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 0% 30%;
+}
+
+/*Crear horarios*/
+.cardHorario{
+width:80%;
+align-content: center;
+margin-left:auto;
+margin-right:auto;
+background-color: #F1F1EF;
+}
+
+/*Resgistro Vehiculos*/
+.thRegiVehiculo{
+    text-align: left;
+}
